@@ -55,7 +55,7 @@ unsigned int heap_level(unsigned int index) {
 }
 
 void heap_print(heap_t *heap) {
-    for (int ix = 0; ix < heap_size(heap); ix++) {
+    for (unsigned int ix = 0; ix < heap_size(heap); ix++) {
         printf("%3d - %3d : " HEAP_KEY_FORMAT "\n", heap_level(ix), ix,
                heap->data[ix].key);
     }
@@ -102,7 +102,7 @@ void heap_bubble_down(heap_t *heap, int index) {
 }
 
 void heap_insert(heap_t *heap, heap_key_t key, heap_value_t data) {
-    if (heap_size(heap) == heap->capacity) {
+    if (heap_size(heap) == (unsigned int)heap->capacity) {
         return;
     }
 
