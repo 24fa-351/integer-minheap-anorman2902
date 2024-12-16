@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-#include "heap.h"
+#include "some_heap.h"
 
 /*
 Assignment 5: integer minheap
@@ -29,7 +29,11 @@ void test_heap(void) {
     exit(0);
 }
 int main(int argc, char *argv[]) {
+    (void)argc;
+    (void)argv;
+    
     srand(time(NULL));
 
     test_heap();
 }
+
